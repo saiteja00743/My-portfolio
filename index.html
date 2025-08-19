@@ -43,6 +43,123 @@
             love learning by doing and growing every single day!</p>
     </section>
 
+        <!-- Education Section -->
+    <!-- <section id="education" class="py-20 px-6 text-center bg-gray-900">
+        <h2 class="text-3xl font-bold mb-10">Education</h2>
+        <div class="max-w-3xl mx-auto space-y-6"> -->
+
+            <!-- Example 1 -->
+            <!-- <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-left">
+                <h3 class="text-xl font-semibold">B.Sc. (Hons) Computer Science III Year</h3>
+                <p class="text-indigo-400">Kakatiya Government College, Hanamkonda</p>
+                <p class="text-sm text-gray-400">2021 – Present</p>
+                <p class="mt-2 text-gray-300">Currently pursuing my bachelor’s degree with focus on
+                    full-stack development, AI & machine learning.</p>
+            </div> -->
+
+            <!-- Example 2 -->
+            <!-- <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-left">
+                <h3 class="text-xl font-semibold">Intermediate (MPC)</h3>
+                <p class="text-indigo-400">Government Junior College(GJC), Geesugonda</p>
+                <p class="text-sm text-gray-400">2021 – 2023</p>
+                <p class="mt-2 text-gray-300">Studied Mathematics, Physics, and Chemistry with strong
+                    academic foundation in problem-solving.</p>
+            </div> -->
+
+            <!-- Example 3 -->
+            <!-- <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-left">
+                <h3 class="text-xl font-semibold">High School</h3>
+                <p class="text-indigo-400">St. John's High School, ookal(H)</p>
+                <p class="text-sm text-gray-400">2021</p>
+                <p class="mt-2 text-gray-300">Completed SSC with distinction, laid foundation for my
+                    interest in technology.</p>
+            </div>
+
+        </div>
+    </section> -->
+
+  <!-- Education Section -->
+  <section id="education" class="py-20 px-6 text-center bg-gray-900">
+    <h2 class="text-3xl font-bold mb-10">Education</h2>
+    <div class="max-w-3xl mx-auto space-y-6">
+
+      <!-- B.Sc -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-left">
+        <h3 class="text-xl font-semibold">B.Sc. (Hons) Computer Science III Year</h3>
+        <p class="text-indigo-400">Kakatiya Government College, Hanamkonda</p>
+        <p class="text-sm text-gray-400">2023 – Present</p>
+        <p class="mt-2 text-gray-300">Currently pursuing my bachelor’s degree with focus on
+          full-stack development, AI & machine learning.</p>
+        <button onclick="openModal('memoBsc')" 
+                class="mt-3 px-4 py-2 bg-indigo-600 rounded-lg hover:bg-indigo-700">
+          Show Memo
+        </button>
+      </div>
+
+      <!-- Intermediate -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-left">
+        <h3 class="text-xl font-semibold">Intermediate (MPC)</h3>
+        <p class="text-indigo-400">Government Junior College (GJC), Geesugonda</p>
+        <p class="text-sm text-gray-400">2021 – 2023</p>
+        <p class="mt-2 text-gray-300">Studied Mathematics, Physics, and Chemistry with strong
+          academic foundation in problem-solving.</p>
+        <button onclick="openModal('memoInter')" 
+                class="mt-3 px-4 py-2 bg-indigo-600 rounded-lg hover:bg-indigo-700">
+          Show Memo
+        </button>
+      </div>
+
+      <!-- High School -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-left">
+        <h3 class="text-xl font-semibold">High School</h3>
+        <p class="text-indigo-400">St. John's High School, Ookal(H)</p>
+        <p class="text-sm text-gray-400">2021</p>
+        <p class="mt-2 text-gray-300">Completed SSC with distinction, laid foundation for my
+          interest in technology.</p>
+        <button onclick="openModal('memoSSC')" 
+                class="mt-3 px-4 py-2 bg-indigo-600 rounded-lg hover:bg-indigo-700">
+          Show Memo
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modals with Zoom Effect -->
+  <!-- B.Sc Memo -->
+  <div id="memoBsc" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
+    <div class="bg-white p-6 rounded-xl max-w-2xl w-11/12 sm:w-full relative transform scale-75 opacity-0 transition-all duration-300">
+      <button onclick="closeModal('memoBsc')" 
+              class="absolute top-2 right-2 text-black text-xl">&times;</button>
+      <img src="bsc.png" alt="B.Sc Memo" 
+           class="w-full max-h-[80vh] object-contain rounded-lg">
+    </div>
+  </div>
+
+  <!-- Intermediate Memo -->
+  <div id="memoInter" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
+    <div class="bg-white p-6 rounded-xl max-w-2xl w-11/12 sm:w-full relative transform scale-75 opacity-0 transition-all duration-300">
+      <button onclick="closeModal('memoInter')" 
+              class="absolute top-2 right-2 text-black text-xl">&times;</button>
+      <img src="inter.jpg" alt="Intermediate Memo" 
+           class="w-full max-h-[80vh] object-contain rounded-lg">
+    </div>
+  </div>
+
+  <!-- SSC Memo -->
+  <div id="memoSSC" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
+    <div class="bg-white p-6 rounded-xl max-w-2xl w-11/12 sm:w-full relative transform scale-75 opacity-0 transition-all duration-300">
+      <button onclick="closeModal('memoSSC')" 
+              class="absolute top-2 right-2 text-black text-xl">&times;</button>
+      <img src="ssctej.jpg" alt="SSC Memo" 
+           class="w-full max-h-[80vh] object-contain rounded-lg">
+    </div>
+  </div>
+
+
+
+
+
     <!-- Projects Section -->
     <section id="projects" class="py-20 px-6">
         <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
@@ -159,6 +276,37 @@
 </section>
 
     <script>
+         function openModal(id) {
+      const modal = document.getElementById(id);
+      const content = modal.querySelector("div");
+      modal.classList.remove("hidden");
+      setTimeout(() => {
+        content.classList.remove("scale-75", "opacity-0");
+        content.classList.add("scale-100", "opacity-100");
+      }, 50);
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      const content = modal.querySelector("div");
+      content.classList.remove("scale-100", "opacity-100");
+      content.classList.add("scale-75", "opacity-0");
+      setTimeout(() => {
+        modal.classList.add("hidden");
+      }, 300);
+    }
+
+    // Optional: Close modal with ESC key
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape") {
+        document.querySelectorAll("[id^='memo']").forEach(modal => {
+          if (!modal.classList.contains("hidden")) {
+            closeModal(modal.id);
+          }
+        });
+      }
+    });
+
         function respondAI() {
             const input = document.getElementById('userInput').value.toLowerCase();
             let response = "I'm still learning! Try asking me about my skills or resume.";
