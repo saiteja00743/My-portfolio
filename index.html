@@ -8,10 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: 'Inter', sans-serif;
+        }
+
+        /* Hexagon Shape */
+        .clip-hex {
+            clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
         }
     </style>
 </head>
@@ -36,41 +41,56 @@
             love learning by doing and growing every single day!</p>
     </section>
 
-    <!-- Projects -->
+    <!-- Projects Section -->
     <section id="projects" class="py-20 px-6">
         <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Example Project 1 -->
-            <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 class="text-xl font-semibold">Portfolio Website</h3>
-                <p class="mt-2 text-sm">Built with HTML, Tailwind CSS and JS. Responsive, modern, and AI-ready.</p>
-                <a href="#" class="text-indigo-400 mt-3 inline-block">Live Preview</a>
-            </div>
-            <!-- Add your projects here 2-->
-              <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 class="text-xl font-semibold">Portfolio Website</h3>
-                <p class="mt-2 text-sm">Built with HTML, Tailwind CSS and JS. Responsive, modern, and AI-ready.</p>
-                <a href="#" class="text-indigo-400 mt-3 inline-block">Live Preview</a>
-            </div>
-            <!-- Add your projects here 3-->
 
+            <!-- Project 1 (Circle) -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
+                <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-indigo-500">
+                    <img src="Netflix_icon.svg" alt="Netflix Clone" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-semibold">Netflix Clone</h3>
+                <p class="mt-2 text-sm">Built with HTML, Tailwind CSS and JS. Responsive, modern & AI-ready.</p>
+                <a href="https://my-netflix-clone-ocnuzr734-saiteja00743s-projects.vercel.app/"
+                    class="text-indigo-400 mt-3 inline-block">Live Preview</a>
+            </div>
 
-              <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 class="text-xl font-semibold">Portfolio Website</h3>
-                <p class="mt-2 text-sm">Built with HTML, Tailwind CSS and JS. Responsive, modern, and AI-ready.</p>
+            <!-- Project 2 (Circle) -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
+                 <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-500">
+                    <img src="ai.jpeg" alt="Todo App" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-semibold">Image-Generator & Promt-Generator Website</h3>
+                <p class="mt-2 text-sm">Personal portfolio built with Tailwind & JS.</p>
+                <a href="https://saiteja00743.github.io/image-generator/" class="text-indigo-400 mt-3 inline-block">Live Preview</a>
+            </div>
+
+            <!-- Project 3 (circle) -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
+                <div class="relative w-24 h-24 mx-auto mb-4">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-500">
+                    <img src="ai.jpeg" alt="Todo App" class="w-full h-full object-cover">
+                </div>
+                </div>
+                <h3 class="text-xl font-semibold">AI Chatbot</h3>
+                <p class="mt-2 text-sm">Simple chatbot built with JS & AI basics.</p>
                 <a href="#" class="text-indigo-400 mt-3 inline-block">Live Preview</a>
             </div>
-            <!-- Add your projects here 4-->
 
-             <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
-                <h3 class="text-xl font-semibold">Portfolio Website</h3>
-                <p class="mt-2 text-sm">Built with HTML, Tailwind CSS and JS. Responsive, modern, and AI-ready.</p>
+            <!-- Project 4 (Circle ) -->
+            <!-- <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
+               <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-500">
+                    <img src="ai.jpeg" alt="Todo App" class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-semibold">Todo App</h3>
+                <p class="mt-2 text-sm">Task manager with local storage & Tailwind.</p>
                 <a href="#" class="text-indigo-400 mt-3 inline-block">Live Preview</a>
-            </div>
+            </div> -->
+
         </div>
     </section>
-
-    
 
     <!-- Resume Section -->
     <section id="resume" class="py-20 bg-gray-800 text-center px-6">
@@ -80,8 +100,7 @@
             <p class="mb-2">✅ HTML, CSS, JavaScript</p>
             <p class="mb-2">✅ Java, Python, DBMS</p>
             <p class="mb-2">✅ Basic AI & ML Concepts</p>
-            <p class="mb-2">✅ Node.js, React, Tailwand CSS</p>
-
+            <p class="mb-2">✅ Node.js, React, Tailwind CSS</p>
         </div>
     </section>
 
