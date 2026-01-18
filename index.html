@@ -203,7 +203,8 @@
         <h3 class="text-xl font-semibold">A-Smart-Agriculture-An-AI-Powered-System</h3>
         <p class="mt-2 text-sm">This Website is friendly Learning for those formers and test weather and give
           suggestions to them.</p>
-        <a href="https://a-smart-agriculture-an-ai-powered-s.vercel.app/" class="text-indigo-400 mt-3 inline-block">Live Preview</a>
+        <a href="https://a-smart-agriculture-an-ai-powered-s.vercel.app/" class="text-indigo-400 mt-3 inline-block">Live
+          Preview</a>
       </div>
 
     </div>
@@ -240,6 +241,7 @@
 
 
 
+
   <!-- AI Chatbot Section
     <section id="ai" class="py-20 px-6 text-center">
         <h2 class="text-3xl font-bold mb-6">Ask My AI</h2>
@@ -252,16 +254,67 @@
         </div>
     </section> -->
 
+
+
+
+
+
+
+
   <!-- Contact Section -->
   <section id="contact" class="py-20 bg-gray-800 text-center px-6">
     <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
-    <form class="max-w-xl mx-auto">
-      <input type="text" placeholder="Your Name" class="w-full px-4 py-3 mb-4 rounded-lg text-black" />
-      <input type="email" placeholder="Your Email" class="w-full px-4 py-3 mb-4 rounded-lg text-black" />
-      <textarea placeholder="Your Message" class="w-full px-4 py-3 mb-4 rounded-lg text-black"></textarea>
-      <button type="submit" class="px-6 py-3 bg-indigo-600 rounded-lg hover:bg-indigo-700">Send</button>
+    <form id="contactForm" class="max-w-xl mx-auto space-y-4">
+      <input id="name" type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg text-black outline-none"
+        required />
+
+      <input id="email" type="email" placeholder="Your Email"
+        class="w-full px-4 py-3 rounded-lg text-black outline-none" required />
+
+      <textarea id="message" placeholder="Your Message" class="w-full px-4 py-3 rounded-lg text-black outline-none"
+        required></textarea>
+
+      <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition">
+        Send
+      </button>
     </form>
+
   </section>
+
+
+
+  <div class="w-full flex justify-center bg-gradient-to-r from-[#0f172a] via-[#111827] to-[#0b1220] py-6">
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gajavellisaiteja123@gmail.com&su=Project%20Inquiry"
+      target="_blank" class="flex items-center justify-center gap-3
+           w-[90%] sm:w-[70%] md:w-[50%]
+           px-6 py-4
+           bg-black/40 backdrop-blur-md
+           rounded-2xl
+           text-white text-base sm:text-lg
+           shadow-lg
+           hover:-translate-y-1
+           hover:scale-[1.03]
+           hover:bg-black/60
+           hover:shadow-[0_0_30px_rgba(139,92,246,0.45)]
+           transition-all duration-300 ease-out
+           hover:bg-black/60 transition-all duration-300
+           ">
+
+      <!-- Mail Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-300" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+
+      <span class="text-center break-all sm:break-normal">
+        gajavellisaiteja123@gmail.com
+      </span>
+    </a>
+  </div>
+
+
+
 
   <!-- Social Media Links -->
   <section class="py-10 bg-gray-900 text-center">
@@ -326,6 +379,21 @@
       else if (input.includes("resume")) response = "Download it from the Resume section above.";
       document.getElementById('aiResponse').innerText = response;
     }
+
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      const text = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+      window.open(
+        `https://wa.me/8465996338?text=${text}`,
+        "_blank"
+      );
+    });
   </script>
 </body>
 
