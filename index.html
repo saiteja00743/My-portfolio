@@ -23,9 +23,10 @@
   </style>
 </head>
 
-<body class="bg-gray-900 text-white">
+<body class="bg-gray-900 text-white" >
   <!-- Hero Section -->
-  <section class="flex flex-col items-center justify-center min-h-screen text-center px-4">
+  <section class="flex flex-col items-center justify-center min-h-screen text-center px-4 bg-gradient-to-b from-black/40 via-transparent to-purple-900/40 z-0"  
+  > <canvas id="starCanvas" class="absolute inset-0 w-full h-full"></canvas>
     <img src="tejadp.jpg" alt="Gajavelli Sai Teja" class="w-32 h-32 rounded-full border-4 border-indigo-500 mb-4">
     <h1 class="text-4xl font-bold">Gajavelli Sai Teja</h1>
     <p class="text-indigo-400 text-lg mt-2">B.Sc. (Hons) CS Student | Full Stack Dev | AI Explorer</p>
@@ -340,6 +341,10 @@
     </div>
   </section>
 
+
+  
+</div>
+
   <script>
     function openModal(id) {
       const modal = document.getElementById(id);
@@ -394,6 +399,49 @@
         "_blank"
       );
     });
+
+
+
+ const canvas = document.getElementById("starCanvas");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+const stars = [];
+const COUNT = 150;
+
+for (let i = 0; i < COUNT; i++) {
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    size: Math.random() * 1.4 + 0.4,
+    speed: Math.random() * 0.4 + 0.1,
+    alpha: Math.random()
+  });
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  stars.forEach(star => {
+    star.y -= star.speed;
+    if (star.y < 0) star.y = canvas.height;
+
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255,255,255,${star.alpha})`;
+    ctx.fill();
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
   </script>
 </body>
 
