@@ -20,13 +20,81 @@
     .clip-hex {
       clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      transition: all 0.3s ease;
+    }
+
+    .nav-scrolled {
+      background: rgba(17, 24, 39, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
   </style>
 </head>
 
-<body class="bg-gray-900 text-white" >
+<body class="bg-gray-900 text-white">
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 border-b border-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex-shrink-0">
+          <a href="#"
+            class="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
+            SAI TEJA
+          </a>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-8">
+            <a href="#"
+              class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105">Home</a>
+            <a href="#about"
+              class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105">About</a>
+            <a href="#education"
+              class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105">Education</a>
+            <a href="#projects"
+              class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105">Projects</a>
+            <a href="#resume"
+              class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105">Resume</a>
+            <a href="#contact"
+              class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-all hover:scale-105">Contact</a>
+          </div>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none p-2 rounded-md">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-900/95 backdrop-blur-lg border-b border-gray-800">
+      <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+        <a href="#"
+          class="mobile-link text-gray-300 hover:text-white block px-3 py-4 rounded-md text-lg font-medium border-b border-gray-800/50">Home</a>
+        <a href="#about"
+          class="mobile-link text-gray-300 hover:text-white block px-3 py-4 rounded-md text-lg font-medium border-b border-gray-800/50">About</a>
+        <a href="#education"
+          class="mobile-link text-gray-300 hover:text-white block px-3 py-4 rounded-md text-lg font-medium border-b border-gray-800/50">Education</a>
+        <a href="#projects"
+          class="mobile-link text-gray-300 hover:text-white block px-3 py-4 rounded-md text-lg font-medium border-b border-gray-800/50">Projects</a>
+        <a href="#resume"
+          class="mobile-link text-gray-300 hover:text-white block px-3 py-4 rounded-md text-lg font-medium border-b border-gray-800/50">Resume</a>
+        <a href="#contact"
+          class="mobile-link text-gray-300 hover:text-white block px-3 py-4 rounded-md text-lg font-medium">Contact</a>
+      </div>
+    </div>
+  </nav>
+
   <!-- Hero Section -->
-  <section class="flex flex-col items-center justify-center min-h-screen text-center px-4 bg-gradient-to-b from-black/40 via-transparent to-purple-900/40 z-0"  
-  > <canvas id="starCanvas" class="absolute inset-0 w-full h-full"></canvas>
+  <section
+    class="flex flex-col items-center justify-center min-h-screen text-center px-4 bg-gradient-to-b from-black/40 via-transparent to-purple-900/40 z-0">
+    <canvas id="starCanvas" class="absolute inset-0 w-full h-full"></canvas>
     <img src="tejadp.jpg" alt="Gajavelli Sai Teja" class="w-32 h-32 rounded-full border-4 border-indigo-500 mb-4">
     <h1 class="text-4xl font-bold">Gajavelli Sai Teja</h1>
     <p class="text-indigo-400 text-lg mt-2">B.Sc. (Hons) CS Student | Full Stack Dev | AI Explorer</p>
@@ -162,53 +230,101 @@
     <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- Project 1 (Circle) -->
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
-        <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-indigo-500">
-          <img src="Netflix_icon.svg" alt="Netflix Clone" class="w-full h-full object-cover">
-        </div>
-        <h3 class="text-xl font-semibold">Netflix Clone</h3>
-        <p class="mt-2 text-sm">Built with HTML, Tailwind CSS and JS. Responsive, modern & AI-ready.</p>
-        <a href="https://saiteja00743.github.io/MyNetflix-clone/" class="text-indigo-400 mt-3 inline-block">Live
-          Preview</a>
-      </div>
-
-      <!-- Project 2 (Circle) -->
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
-        <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-500">
-          <img src="imagegenrotor.png" alt="Todo App" class="w-full h-full object-cover">
-        </div>
-        <h3 class="text-xl font-semibold">Image-Generator & Promt-Generator Website</h3>
-        <p class="mt-2 text-sm">Personal portfolio built with Tailwind & JS.</p>
-        <a href="https://saiteja00743.github.io/image-generator/" class="text-indigo-400 mt-3 inline-block">Live
-          Preview</a>
-      </div>
-
-      <!-- Project 3 (circle) -->
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
-        <div class="relative w-24 h-24 mx-auto mb-4">
-          <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-500">
-            <img src="todo.jpg" alt="Todo App" class="w-full h-full object-cover">
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center flex flex-col justify-between">
+        <div>
+          <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-indigo-500">
+            <img src="Netflix_icon.svg" alt="Netflix Clone" class="w-full h-full object-cover">
           </div>
+          <h3 class="text-xl font-semibold">Netflix Clone</h3>
+          <p class="mt-2 text-sm text-gray-300">Built with HTML, Tailwind CSS, and JS. A responsive and pixel-perfect
+            Netflix landing page clone.</p>
+          <p class="mt-2 text-xs text-indigo-400">HTML · Tailwind CSS · JavaScript</p>
         </div>
-        <h3 class="text-xl font-semibold">My-To-do</h3>
-        <p class="mt-2 text-sm">Simple & Advanced UI with the use of HTML CSS JS.</p>
-        <a href="https://saiteja00743.github.io/My_To-Do/" class="text-indigo-400 mt-3 inline-block">Live Preview</a>
+        <div class="flex justify-center gap-4 mt-6">
+          <a href="https://saiteja00743.github.io/MyNetflix-clone/" target="_blank"
+            class="text-indigo-400 hover:underline font-medium">Live Preview</a>
+          <a href="https://github.com/saiteja00743/MyNetflix-clone" target="_blank"
+            class="text-indigo-400 hover:underline font-medium">GitHub Repo</a>
+        </div>
       </div>
 
-      <!-- Project 4 (Circle ) -->
-      <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
-        <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-500">
-          <img src="smartagri.png" alt="Todo App" class="w-full h-full object-cover">
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center flex flex-col justify-between">
+        <div>
+          <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-500">
+            <img src="imagegenrotor.png" alt="Image Generator" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-semibold">AI Image & Prompt Generator</h3>
+          <p class="mt-2 text-sm text-gray-300">A website that generates stunning images and prompts using AI
+            integrations.</p>
+          <p class="mt-2 text-xs text-green-400">Tailwind CSS · JavaScript · AI APIs</p>
         </div>
-        <h3 class="text-xl font-semibold">A-Smart-Agriculture-An-AI-Powered-System</h3>
-        <p class="mt-2 text-sm">This Website is friendly Learning for those formers and test weather and give
-          suggestions to them.</p>
-        <a href="https://a-smart-agriculture-an-ai-powered-s.vercel.app/" class="text-indigo-400 mt-3 inline-block">Live
-          Preview</a>
+        <div class="flex justify-center gap-4 mt-6">
+          <a href="https://saiteja00743.github.io/image-generator/" target="_blank"
+            class="text-indigo-400 hover:underline font-medium">Live Preview</a>
+          <a href="https://github.com/saiteja00743/image-generator" target="_blank"
+            class="text-indigo-400 hover:underline font-medium">GitHub Repo</a>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center flex flex-col justify-between">
+        <div>
+          <div class="relative w-24 h-24 mx-auto mb-4">
+            <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-indigo-500">
+              <img src="todo.jpg" alt="Todo App" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <h3 class="text-xl font-semibold">Advanced To-Do List</h3>
+          <p class="mt-2 text-sm text-gray-300">A sleek and functional task management app with persistent storage.</p>
+          <p class="mt-2 text-xs text-indigo-400">HTML · CSS · JavaScript</p>
+        </div>
+        <div class="flex justify-center gap-4 mt-6">
+          <a href="https://saiteja00743.github.io/My_To-Do/" target="_blank"
+            class="text-indigo-400 hover:underline font-medium">Live Preview</a>
+          <a href="https://github.com/saiteja00743/My_To-Do" target="_blank"
+            class="text-indigo-400 hover:underline font-medium">GitHub Repo</a>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center flex flex-col justify-between">
+        <div>
+          <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-green-500">
+            <img src="smartagri.png" alt="Smart Agriculture" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-semibold">AI Powered Smart Agriculture</h3>
+          <p class="mt-2 text-sm text-gray-300">An AI-powered system providing weather analysis and crop suggestions for
+            farmers.</p>
+          <p class="mt-2 text-xs text-green-400">Next.js · AI · Vercel</p>
+        </div>
+        <div class="flex justify-center gap-4 mt-6">
+          <a href="https://a-smart-agriculture-an-ai-powered-s.vercel.app/" target="_blank"
+            class="text-indigo-400 hover:underline font-medium">Live Preview</a>
+          <a href="https://github.com/saiteja00743/A-Smart-Agriculture-An-AI-Powered-System-" target="_blank"
+            class="text-indigo-400 hover:underline font-medium">GitHub Repo</a>
+        </div>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg text-center flex flex-col justify-between">
+        <div>
+          <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-indigo-500">
+            <img src="Aijobs.png" alt="AI Job Tracker" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-semibold">AI Job Tracker & Smart Match</h3>
+          <p class="mt-2 text-sm text-gray-300">A full-stack MERN application that helps users track job applications
+            with AI resume matching.</p>
+          <p class="mt-2 text-xs text-indigo-400">MERN · OpenAI · MongoDB · Railway</p>
+        </div>
+        <div class="flex justify-center gap-4 mt-6">
+          <a href="https://aijobfinder-production-5af2.up.railway.app/" target="_blank"
+            class="text-indigo-400 hover:underline font-medium">Live Preview</a>
+          <a href="https://github.com/saiteja00743/Ai_job_finder" target="_blank"
+            class="text-indigo-400 hover:underline font-medium">GitHub Repo</a>
+        </div>
       </div>
 
     </div>
+
+
+
+
   </section>
 
   <!-- Resume Section -->
@@ -342,8 +458,8 @@
   </section>
 
 
-  
-</div>
+
+  </div>
 
   <script>
     function openModal(id) {
@@ -402,46 +518,85 @@
 
 
 
- const canvas = document.getElementById("starCanvas");
-const ctx = canvas.getContext("2d");
+    const canvas = document.getElementById("starCanvas");
+    const ctx = canvas.getContext("2d");
 
-function resizeCanvas() {
-  canvas.width = canvas.offsetWidth;
-  canvas.height = canvas.offsetHeight;
-}
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
+    function resizeCanvas() {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    }
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
 
-const stars = [];
-const COUNT = 150;
+    const stars = [];
+    const COUNT = 150;
 
-for (let i = 0; i < COUNT; i++) {
-  stars.push({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    size: Math.random() * 1.4 + 0.4,
-    speed: Math.random() * 0.4 + 0.1,
-    alpha: Math.random()
-  });
-}
+    for (let i = 0; i < COUNT; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 1.4 + 0.4,
+        speed: Math.random() * 0.4 + 0.1,
+        alpha: Math.random()
+      });
+    }
 
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  stars.forEach(star => {
-    star.y -= star.speed;
-    if (star.y < 0) star.y = canvas.height;
+      stars.forEach(star => {
+        star.y -= star.speed;
+        if (star.y < 0) star.y = canvas.height;
 
-    ctx.beginPath();
-    ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(255,255,255,${star.alpha})`;
-    ctx.fill();
-  });
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255,255,255,${star.alpha})`;
+        ctx.fill();
+      });
 
-  requestAnimationFrame(animate);
-}
+      requestAnimationFrame(animate);
+    }
 
-animate();
+    animate();
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('nav-scrolled', 'border-gray-800');
+        navbar.classList.remove('border-transparent');
+      } else {
+        navbar.classList.remove('nav-scrolled', 'border-gray-800');
+        navbar.classList.add('border-transparent');
+      }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileMenuButton.querySelector('i');
+      if (mobileMenu.classList.contains('hidden')) {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      } else {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      }
+    });
+
+    // Close mobile menu when clicking a link
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        const icon = mobileMenuButton.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      });
+    });
   </script>
 </body>
 
