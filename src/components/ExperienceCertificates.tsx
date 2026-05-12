@@ -12,23 +12,31 @@ const experience = {
   ],
 };
 
-const downloadActions = [
+/** Files live in `public/` (spaces in filenames are encoded in URLs). */
+const documentActions = [
   {
-    label: "Download experience letter",
-    href: "/android-dev-2.png",
+    id: "experience-letter",
+    downloadLabel: "Download experience letter",
+    previewLabel: "Preview experience letter",
+    href: "/android dev2.jpg",
     downloadName:
-      "UptoSkills_Android_Internship_Experience_Letter_Sai_Teja_Gajavelli.png",
+      "UptoSkills_Android_Internship_Experience_Letter_Sai_Teja_Gajavelli.jpg",
   },
   {
-    label: "Download certificate of completion",
-    href: "/android-dev-1.png",
+    id: "certificate",
+    downloadLabel: "Download certificate of completion",
+    previewLabel: "Preview certificate",
+    href: "/android dev1.jpg",
     downloadName:
-      "UptoSkills_Android_Internship_Certificate_Sai_Teja_Gajavelli.png",
+      "UptoSkills_Android_Internship_Certificate_Sai_Teja_Gajavelli.jpg",
   },
-];
+] as const;
 
 const btnClass =
   "inline-flex flex-1 items-center justify-center border border-white/25 bg-white/5 px-5 py-3.5 font-sans text-[11px] font-semibold uppercase tracking-editorial text-white transition-colors hover:border-white/35 hover:bg-white/10 sm:min-w-[14rem] sm:flex-none";
+
+const previewBtnClass =
+  "inline-flex flex-1 items-center justify-center border border-white/15 bg-transparent px-5 py-3.5 font-sans text-[11px] font-semibold uppercase tracking-editorial text-white/90 transition-colors hover:border-white/28 hover:bg-white/[0.07] sm:min-w-[12rem] sm:flex-none";
 
 export function ExperienceCertificates() {
   return (
@@ -81,17 +89,32 @@ export function ExperienceCertificates() {
             ))}
           </ul>
 
-          <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-8 sm:flex-row sm:flex-wrap">
-            {downloadActions.map((item) => (
-              <a
-                key={item.label}
-                href={encodeURI(item.href)}
-                download={item.downloadName}
-                className={btnClass}
-              >
-                {item.label}
-              </a>
-            ))}
+          <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-8">
+            {documentActions.map((item) => {
+              const fileUrl = encodeURI(item.href);
+              return (
+                <div
+                  key={item.id}
+                  className="flex flex-col gap-2 sm:flex-row sm:flex-wrap"
+                >
+                  <a
+                    href={fileUrl}
+                    download={item.downloadName}
+                    className={btnClass}
+                  >
+                    {item.downloadLabel}
+                  </a>
+                  <a
+                    href={fileUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={previewBtnClass}
+                  >
+                    {item.previewLabel}
+                  </a>
+                </div>
+              );
+            })}
           </div>
         </motion.article>
       </div>
