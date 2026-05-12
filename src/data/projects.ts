@@ -37,7 +37,7 @@ export const projects: Project[] = [
     stack: "Tailwind CSS · JavaScript · AI APIs",
     liveUrl: "https://saiteja00743.github.io/image-generator/",
     githubUrl: "https://github.com/saiteja00743/image-generator",
-    image: "/imagegenrotor.png",
+    image: "/previews/ai-image-generator.png",
     imageAlt: "AI Image Generator preview",
   },
   {
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     stack: "HTML · CSS · JavaScript",
     liveUrl: "https://saiteja00743.github.io/My_To-Do/",
     githubUrl: "https://github.com/saiteja00743/My_To-Do",
-    image: "/todo.jpg",
+    image: "/previews/todo-list.png",
     imageAlt: "To-Do application preview",
   },
   {
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     liveUrl: "https://a-smart-agriculture-an-ai-powered-s.vercel.app/",
     githubUrl:
       "https://github.com/saiteja00743/A-Smart-Agriculture-An-AI-Powered-System-",
-    image: "/smartagri.png",
+    image: "/previews/smart-agriculture.png",
     imageAlt: "Smart agriculture preview",
   },
   {
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     stack: "MERN · OpenAI · MongoDB · Railway",
     liveUrl: "https://aijobfinder-production-5af2.up.railway.app/",
     githubUrl: "https://github.com/saiteja00743/Ai_job_finder",
-    image: "/Aijobs.png",
+    image: "/previews/ai-job-tracker.png",
     imageAlt: "AI Job Tracker preview",
   },
 ];
