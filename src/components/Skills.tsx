@@ -31,7 +31,7 @@ export function Skills() {
           transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
           className="mb-16 max-w-2xl"
         >
-          <p className="font-sans text-[11px] font-semibold uppercase tracking-editorial text-white/75">
+          <p className="font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-white/75">
             Technical profile
           </p>
           <h2 className="mt-4 font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold text-white text-display-contrast">
@@ -57,7 +57,7 @@ export function Skills() {
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
               className="glass-dark glass-dark-hover flex flex-col rounded-2xl p-7"
             >
-              <h3 className="font-sans text-[10px] font-semibold uppercase tracking-[0.35em] text-white/70">
+              <h3 className="font-sans text-[0.625rem] font-semibold uppercase tracking-[0.35em] text-white/70">
                 {g.title}
               </h3>
               <ul className="mt-6 space-y-3 font-display text-xl font-medium text-white">

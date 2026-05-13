@@ -5,6 +5,17 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Prevents mobile browsers from auto-scaling text (blurry / “zoomed” look). */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    font-size: 100%;
+  }
+
+  /* Zoom out the whole UI on small viewports (Tailwind spacing/type use rem). */
+  @media (max-width: 767px) {
+    html {
+      font-size: 80%;
+    }
   }
 
   body {

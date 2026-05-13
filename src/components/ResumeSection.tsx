@@ -64,7 +64,7 @@ export function ResumeSection() {
             >
               <span className="font-display text-2xl font-semibold text-white">{d.label}</span>
               <span className="mt-3 font-sans text-sm font-medium text-white/80">{d.sub}</span>
-              <span className="mt-10 inline-flex items-center gap-2 font-sans text-[11px] font-semibold uppercase tracking-editorial text-white/90 transition-colors group-hover:text-white">
+              <span className="mt-10 inline-flex items-center gap-2 font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-white/90 transition-colors group-hover:text-white">
                 Download
                 <svg
                   className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1"

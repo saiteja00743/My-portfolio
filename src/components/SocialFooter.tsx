@@ -62,7 +62,7 @@ export function SocialFooter() {
           ))}
         </nav>
 
-        <p className="font-sans text-[11px] font-medium uppercase tracking-editorial text-white/65">
+        <p className="font-sans text-[0.6875rem] font-medium uppercase tracking-editorial text-white/65">
           © {new Date().getFullYear()} · Aspiring Student License — Learning, Building & Growing
         </p>
       </div>

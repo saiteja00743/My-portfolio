@@ -24,7 +24,7 @@ export function About() {
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
         >
-          <p className="font-sans text-[11px] font-semibold uppercase tracking-editorial text-neutral-700">
+          <p className="font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-neutral-700">
             About me
           </p>
           <h2 className="mt-4 font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-tight tracking-tight text-neutral-950">
@@ -60,7 +60,7 @@ export function About() {
           </div>
           <div className="mt-10 grid gap-6 border-t border-black/10 pt-10 sm:grid-cols-2">
             <div>
-              <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.35em] text-neutral-600">
+              <p className="font-sans text-[0.625rem] font-semibold uppercase tracking-[0.35em] text-neutral-600">
                 Focus
               </p>
               <p className="mt-2 font-display text-2xl font-semibold text-neutral-950">
@@ -68,7 +68,7 @@ export function About() {
               </p>
             </div>
             <div>
-              <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.35em] text-neutral-600">
+              <p className="font-sans text-[0.625rem] font-semibold uppercase tracking-[0.35em] text-neutral-600">
                 Philosophy
               </p>
               <p className="mt-2 font-display text-2xl font-medium italic text-neutral-900">

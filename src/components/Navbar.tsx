@@ -39,10 +39,10 @@ export function Navbar() {
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex h-[4.25rem] max-w-6xl items-center justify-between px-5 sm:px-8">
+      <nav className="mx-auto flex h-[3.75rem] max-w-6xl items-center justify-between px-5 md:h-[4.25rem] sm:px-8">
         <a
           href="#home"
-          className="font-display text-xl font-semibold tracking-[0.22em] text-white sm:text-2xl text-display-contrast"
+          className="font-display text-lg font-semibold tracking-[0.22em] text-white sm:text-2xl text-display-contrast"
           onClick={() => setOpen(false)}
         >
           GST
@@ -53,7 +53,7 @@ export function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="font-sans text-[11px] font-semibold uppercase tracking-editorial text-white/90 transition-colors duration-300 hover:text-white"
+                className="font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-white/90 transition-colors duration-300 hover:text-white"
               >
                 {l.label}
               </a>
@@ -100,7 +100,7 @@ export function Navbar() {
                 y: open ? 0 : 12,
               }}
               transition={{ delay: open ? 0.05 * i : 0, duration: 0.35 }}
-              className="font-display text-3xl font-semibold text-white text-display-contrast"
+              className="font-display text-2xl font-semibold text-white text-display-contrast"
               onClick={() => setOpen(false)}
             >
               {l.label}

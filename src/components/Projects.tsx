@@ -16,7 +16,7 @@ export function Projects() {
           className="mb-16 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"
         >
           <div>
-            <p className="font-sans text-[11px] font-semibold uppercase tracking-editorial text-neutral-700">
+            <p className="font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-neutral-700">
               My projects
             </p>
             <h2 className="mt-4 max-w-xl font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-tight text-neutral-950 text-balance">
@@ -78,7 +78,7 @@ function ProjectRow({
       </div>
 
       <div className={`space-y-6 ${reverse ? "lg:[direction:ltr]" : ""}`}>
-        <p className="font-sans text-[10px] font-semibold uppercase tracking-[0.35em] text-neutral-600">
+        <p className="font-sans text-[0.625rem] font-semibold uppercase tracking-[0.35em] text-neutral-600">
           {String(index + 1).padStart(2, "0")}
         </p>
         <h3 className="font-display text-3xl font-semibold md:text-4xl text-neutral-950">
@@ -95,7 +95,7 @@ function ProjectRow({
             href={project.liveUrl}
             target="_blank"
             rel="noreferrer"
-            className="glass-light glass-light-hover inline-flex items-center justify-center px-8 py-3 font-sans text-[11px] font-semibold uppercase tracking-editorial text-neutral-950"
+            className="glass-light glass-light-hover inline-flex items-center justify-center px-8 py-3 font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-neutral-950"
           >
             Live Preview
           </a>
@@ -103,7 +103,7 @@ function ProjectRow({
             href={project.githubUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center border border-neutral-950 px-8 py-3 font-sans text-[11px] font-semibold uppercase tracking-editorial text-neutral-950 transition-all duration-500 ease-luxury hover:bg-neutral-950 hover:text-white"
+            className="inline-flex items-center justify-center border border-neutral-950 px-8 py-3 font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-neutral-950 transition-all duration-500 ease-luxury hover:bg-neutral-950 hover:text-white"
           >
             GitHub
           </a>

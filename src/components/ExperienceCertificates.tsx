@@ -33,10 +33,10 @@ const documentActions = [
 ] as const;
 
 const btnClass =
-  "inline-flex flex-1 items-center justify-center border border-white/25 bg-white/5 px-5 py-3.5 font-sans text-[11px] font-semibold uppercase tracking-editorial text-white transition-colors hover:border-white/35 hover:bg-white/10 sm:min-w-[14rem] sm:flex-none";
+  "inline-flex flex-1 items-center justify-center border border-white/25 bg-white/5 px-5 py-3.5 font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-white transition-colors hover:border-white/35 hover:bg-white/10 sm:min-w-[14rem] sm:flex-none";
 
 const previewBtnClass =
-  "inline-flex flex-1 items-center justify-center border border-white/15 bg-transparent px-5 py-3.5 font-sans text-[11px] font-semibold uppercase tracking-editorial text-white/90 transition-colors hover:border-white/28 hover:bg-white/[0.07] sm:min-w-[12rem] sm:flex-none";
+  "inline-flex flex-1 items-center justify-center border border-white/15 bg-transparent px-5 py-3.5 font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-white/90 transition-colors hover:border-white/28 hover:bg-white/[0.07] sm:min-w-[12rem] sm:flex-none";
 
 export function ExperienceCertificates() {
   return (
@@ -54,7 +54,7 @@ export function ExperienceCertificates() {
           transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
           className="mb-14 max-w-2xl"
         >
-          <p className="font-sans text-[11px] font-semibold uppercase tracking-editorial text-white/75">
+          <p className="font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-white/75">
             Experience & certificates
           </p>
           <h2 className="mt-4 font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold text-display-contrast">

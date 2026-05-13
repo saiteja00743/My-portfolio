@@ -29,7 +29,7 @@ export function Contact() {
           className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:items-start"
         >
           <div>
-            <p className="font-sans text-[11px] font-semibold uppercase tracking-editorial text-neutral-700">
+            <p className="font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-neutral-700">
               Inquiry
             </p>
             <h2 className="mt-4 font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-tight text-neutral-950">
@@ -49,7 +49,7 @@ export function Contact() {
             className="glass-light glass-light-hover rounded-2xl border-black/[0.08] p-8 sm:p-10"
           >
             <label className="block">
-              <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.35em] text-neutral-700">
+              <span className="font-sans text-[0.625rem] font-semibold uppercase tracking-[0.35em] text-neutral-700">
                 Name
               </span>
               <input
@@ -61,7 +61,7 @@ export function Contact() {
               />
             </label>
             <label className="mt-8 block">
-              <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.35em] text-neutral-700">
+              <span className="font-sans text-[0.625rem] font-semibold uppercase tracking-[0.35em] text-neutral-700">
                 Email
               </span>
               <input
@@ -74,7 +74,7 @@ export function Contact() {
               />
             </label>
             <label className="mt-8 block">
-              <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.35em] text-neutral-700">
+              <span className="font-sans text-[0.625rem] font-semibold uppercase tracking-[0.35em] text-neutral-700">
                 Message
               </span>
               <textarea
@@ -89,7 +89,7 @@ export function Contact() {
               type="submit"
               whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 0.99 }}
-              className="mt-10 w-full border border-neutral-950 bg-neutral-950 py-4 font-sans text-[11px] font-semibold uppercase tracking-editorial text-white transition-colors duration-500 hover:bg-white hover:text-neutral-950"
+              className="mt-10 w-full border border-neutral-950 bg-neutral-950 py-4 font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-white transition-colors duration-500 hover:bg-white hover:text-neutral-950"
             >
               Send
             </motion.button>
