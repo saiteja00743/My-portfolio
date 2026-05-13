@@ -63,7 +63,7 @@ export function SocialFooter() {
         </nav>
 
         <p className="font-sans text-[11px] font-medium uppercase tracking-editorial text-white/65">
-          © {new Date().getFullYear()} · Crafted with monochrome restraint
+          © {new Date().getFullYear()} · Aspiring Student License — Learning, Building & Growing
         </p>
       </div>
     </footer>
