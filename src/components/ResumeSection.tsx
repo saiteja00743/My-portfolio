@@ -2,20 +2,20 @@ import { motion } from "framer-motion";
 
 const downloads = [
   {
-    label: "Résumé (PDF)",
-    sub: "2026 · One-page profile",
+    label: "Resume (PDF)",
+    sub: "2026, one-page profile",
     href: "/Sai Teja Gajavelli 2026.pdf",
     filename: "Sai_Teja_Gajavelli_Resume_2026.pdf",
   },
   {
-    label: "Curriculum vitae (PDF)",
-    sub: "2026 · Extended detail",
+    label: "Curriculum Vitae (PDF)",
+    sub: "2026, extended detail",
     href: "/CV 2026.pdf",
     filename: "Sai_Teja_Gajavelli_CV_2026.pdf",
   },
   {
-    label: "Résumé (Word)",
-    sub: "DOCX · Editable source",
+    label: "Resume (Word)",
+    sub: "DOCX, editable source",
     href: "/Sai Teja Gajavelli resume creating.docx",
     filename: "Sai_Teja_Gajavelli_Resume.docx",
   },
@@ -34,15 +34,12 @@ export function ResumeSection() {
           transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
           className="mb-14 max-w-2xl"
         >
-          <p className="font-sans text-[11px] font-semibold uppercase tracking-editorial text-white/75">
-            Professional documents
-          </p>
-          <h2 className="mt-4 font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold text-white text-display-contrast">
-            Résumé & curriculum vitae
+          <h2 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold text-white text-display-contrast">
+            Resume and Curriculum Vitae
           </h2>
           <p className="mt-4 font-sans font-medium text-white/85">
-            Concise profiles of my experience in full stack development, AI, and
-            structured problem solving—offered in PDF and Word so recruiters,
+            Concise profiles of my experience in full-stack development, AI, and
+            structured problem solving, offered in PDF and Word so recruiters,
             mentors, and collaborators can review my background in the format
             they prefer.
           </p>
