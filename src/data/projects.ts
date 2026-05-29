@@ -37,7 +37,7 @@ export const projects: Project[] = [
     stack: "HTML · Tailwind CSS · JavaScript",
     liveUrl: "https://saiteja00743.github.io/MyNetflix-clone/",
     githubUrl: "https://github.com/saiteja00743/MyNetflix-clone",
-    image: "/Netflix_icon.svg",
+    image: "/previews/netflix-clone.png",
     imageAlt: "Netflix Clone preview",
   },
   {
