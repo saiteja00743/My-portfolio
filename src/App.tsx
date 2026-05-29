@@ -3,6 +3,7 @@ import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { ExperienceCertificates } from "./components/ExperienceCertificates";
+import { CertificationsBadges } from "./components/CertificationsBadges";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { ResumeSection } from "./components/ResumeSection";
@@ -22,6 +23,7 @@ export default function App() {
         <Hero />
         <About />
         <ExperienceCertificates />
+        <CertificationsBadges />
         <Skills />
         <Projects />
         <ResumeSection />
