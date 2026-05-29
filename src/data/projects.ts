@@ -26,7 +26,7 @@ export const projects: Project[] = [
       "A SaaS tool that detects overlapping AI subscriptions and shows teams where they're silently wasting money. Features a smart audit engine for plan optimization, Claude 3.5 Haiku-powered insights, Resend for automated reports, and 100% test coverage with Vitest.",
     stack: "Next.js · TypeScript · Claude 3.5 Haiku · Resend · Vitest · Vercel",
     liveUrl: "https://aicosttracker-nu.vercel.app/",
-    githubUrl: "https://lnkd.in/gYf3wEny",
+    githubUrl: "https://github.com/saiteja00743/AICostTracker",
     image: "/previews/ai-cost-tracker.png",
     imageAlt: "AI Cost Tracker — Stop Overpaying for AI Tools",
   },
