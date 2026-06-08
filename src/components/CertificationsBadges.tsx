@@ -10,6 +10,7 @@ interface Certificate {
   image: string;
   description: string;
   icon: "brain" | "cloud" | "terminal" | "robot" | "prompt" | "android" | "graduate" | "award";
+  verifyUrl?: string;
 }
 
 const certificatesData: Certificate[] = [
@@ -72,6 +73,17 @@ const certificatesData: Certificate[] = [
     image: "/certificates/Screenshot_2026-05-28-19-20-47-74_254de13a4bc8758c9908fff1f73e3725.jpg",
     description: "Rapidly shipping applications, automating testing, and running data analysis in minutes using modern AI developer assistants.",
     icon: "terminal",
+  },
+  {
+    id: "cognitiveclass-sql-101",
+    title: "SQL and Relational Databases 101",
+    issuer: "CognitiveClass.ai · IBM Skills Network",
+    date: "June 6, 2026",
+    category: "dev-systems",
+    image: "/certificates/cognitiveclass-sql-101.png",
+    description: "Successfully completed and received a passing grade in SQL and Relational Databases 101 (DB0101EN), provided by IBM Skills Network. Issued by Cognitive Class on cognitiveclass.ai — powered by IBM Developer Skills Network.",
+    icon: "terminal",
+    verifyUrl: "https://courses.cognitiveclass.ai/certificates/e588e9fe64b444d292aa7d61441e8515",
   },
   {
     id: "iitb-linux-training",
@@ -430,21 +442,36 @@ export function CertificationsBadges() {
                 </button>
               </div>
 
-              {/* Bottom Caption & Download Link */}
+              {/* Bottom Caption & Action Links */}
               <div className="flex w-full flex-col gap-4 border-t border-white/10 pt-4 text-center md:flex-row md:items-center md:justify-between md:text-left">
                 <p className="max-w-2xl font-sans text-sm font-medium text-white/80 leading-relaxed">
                   {selectedCert.description}
                 </p>
-                <a
-                  href={selectedCert.image}
-                  download={selectedCert.title.replace(/\s+/g, "_") + "_Certificate"}
-                  className="inline-flex items-center justify-center gap-2 border border-white bg-white px-6 py-3 font-sans text-xs font-semibold uppercase tracking-wider text-black transition-colors hover:bg-transparent hover:text-white"
-                >
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                  </svg>
-                  Download Image
-                </a>
+                <div className="flex shrink-0 items-center gap-3">
+                  {selectedCert.verifyUrl && (
+                    <a
+                      href={selectedCert.verifyUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center justify-center gap-2 border border-white/30 bg-white/10 px-5 py-3 font-sans text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:bg-white/20"
+                    >
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      Verify
+                    </a>
+                  )}
+                  <a
+                    href={selectedCert.image}
+                    download={selectedCert.title.replace(/\s+/g, "_") + "_Certificate"}
+                    className="inline-flex items-center justify-center gap-2 border border-white bg-white px-6 py-3 font-sans text-xs font-semibold uppercase tracking-wider text-black transition-colors hover:bg-transparent hover:text-white"
+                  >
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Download
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>
