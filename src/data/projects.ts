@@ -87,8 +87,8 @@ export const projects: Project[] = [
       "A premium, production-ready Student Learning Dashboard built with performance-first patterns. Features Server/Client Component Split for zero layout shift, GPU-accelerated animations, custom CLS-free loading skeletons, and a smart Supabase backend with graceful fallback for RLS policy restrictions.",
     stack:
       "Next.js 15 · TypeScript · Tailwind CSS v4 · Framer Motion · Supabase · Lucide React",
-    liveUrl: "https://lnkd.in/gxq4nWBS",
-    githubUrl: "https://lnkd.in/gud3C4r7",
+    liveUrl: "https://next-gen-learning-dashboard-psi.vercel.app/dashboard",
+    githubUrl: "https://github.com/saiteja00743/Next-Gen-Learning-Dashboard",
     image: "/previews/sai-dashboard.png",
     imageAlt: "Sai Student Learning Dashboard preview",
   },
