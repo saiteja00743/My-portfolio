@@ -81,4 +81,15 @@ export const projects: Project[] = [
     image: "/previews/ai-job-tracker.png",
     imageAlt: "AI Job Tracker preview",
   },
+  {
+    title: "Sai — Student Learning Dashboard",
+    description:
+      "A premium, production-ready Student Learning Dashboard built with performance-first patterns. Features Server/Client Component Split for zero layout shift, GPU-accelerated animations, custom CLS-free loading skeletons, and a smart Supabase backend with graceful fallback for RLS policy restrictions.",
+    stack:
+      "Next.js 15 · TypeScript · Tailwind CSS v4 · Framer Motion · Supabase · Lucide React",
+    liveUrl: "https://lnkd.in/gxq4nWBS",
+    githubUrl: "https://lnkd.in/gud3C4r7",
+    image: "/previews/sai-dashboard.png",
+    imageAlt: "Sai Student Learning Dashboard preview",
+  },
 ];
