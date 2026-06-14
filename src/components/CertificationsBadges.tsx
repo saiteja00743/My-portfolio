@@ -75,6 +75,16 @@ const certificatesData: Certificate[] = [
     icon: "terminal",
   },
   {
+    id: "cisco-python-essentials-1",
+    title: "Python Essentials 1",
+    issuer: "Cisco Networking Academy",
+    date: "2026",
+    category: "dev-systems",
+    image: "/certificates/python essentials 1.png",
+    description: "Completed Python Essentials 1 from Cisco Networking Academy — covering Python syntax, data types, control flow, functions, and foundational programming concepts.",
+    icon: "terminal",
+  },
+  {
     id: "cognitiveclass-sql-101",
     title: "SQL and Relational Databases 101",
     issuer: "CognitiveClass.ai · IBM Skills Network",
