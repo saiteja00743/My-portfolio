@@ -48,6 +48,7 @@ function ProjectRow({
 }) {
   const [imgOk, setImgOk] = useState(true);
   const reverse = index % 2 === 1;
+  const hasTags = project.tags && project.tags.length > 0;
 
   return (
     <motion.article
@@ -81,6 +82,20 @@ function ProjectRow({
         <p className="font-sans text-[0.625rem] font-semibold uppercase tracking-[0.35em] text-neutral-600">
           {String(index + 1).padStart(2, "0")}
         </p>
+
+        {hasTags && (
+          <div className="flex flex-wrap gap-2">
+            {project.tags!.map((tag) => (
+              <span
+                key={tag}
+                className="inline-flex items-center rounded-full border border-neutral-950/10 bg-neutral-950/[0.05] px-3 py-0.5 font-sans text-[0.625rem] font-semibold uppercase tracking-widest text-neutral-700"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+
         <h3 className="font-display text-3xl font-semibold md:text-4xl text-neutral-950">
           {project.title}
         </h3>
