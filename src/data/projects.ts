@@ -10,7 +10,19 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  // ── AI / ML Projects (featured first) ────────────────────────────────────
+  // ── Agency & Featured Projects ──────────────────────────────────────────
+  {
+    title: "Teja Agency Startup",
+    description:
+      "Official AI & Software Development agency delivering custom AI solutions, high-performance web applications, intelligent automation, and modern tech products for startups and enterprises worldwide.",
+    stack: "React · Vite · Tailwind CSS · AI Agents · Cloud Architecture",
+    liveUrl: "https://teja-agency-startup.vercel.app/",
+    githubUrl: "https://teja-agency-startup.vercel.app/",
+    image: "/previews/agency-preview.png",
+    imageAlt: "Teja Agency Startup website",
+    tags: ["Agency", "AI Startup", "Full Stack", "Client Solutions"],
+  },
+  // ── AI / ML Projects (featured) ──────────────────────────────────────────
   {
     title: "Real-Time Emotion Detector",
     description:

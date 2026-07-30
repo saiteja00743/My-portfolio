@@ -10,6 +10,7 @@ const links = [
   { href: "#projects", label: "Projects" },
   { href: "#resume", label: "Resume" },
   { href: "#contact", label: "Contact" },
+  { href: "https://teja-agency-startup.vercel.app/", label: "Agency ↗", external: true },
 ];
 
 export function Navbar() {
@@ -49,12 +50,18 @@ export function Navbar() {
           GST
         </a>
 
-        <ul className="hidden items-center gap-10 md:flex">
+        <ul className="hidden items-center gap-6 lg:gap-8 md:flex">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-white/90 transition-colors duration-300 hover:text-white"
+                target={l.external ? "_blank" : undefined}
+                rel={l.external ? "noopener noreferrer" : undefined}
+                className={`font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial transition-all duration-300 ${
+                  l.external
+                    ? "rounded-full border border-white/30 bg-white/10 px-3.5 py-1 text-white hover:border-white hover:bg-white/20 shadow-sm"
+                    : "text-white/90 hover:text-white"
+                }`}
               >
                 {l.label}
               </a>
@@ -90,18 +97,22 @@ export function Navbar() {
         transition={{ duration: 0.35 }}
         className="fixed inset-0 z-[55] bg-black/70 backdrop-blur-xl md:hidden"
       >
-        <div className="flex min-h-screen flex-col items-center justify-center gap-10 pt-20">
+        <div className="flex min-h-screen flex-col items-center justify-center gap-8 pt-20">
           {links.map((l, i) => (
             <motion.a
               key={l.href}
               href={l.href}
+              target={l.external ? "_blank" : undefined}
+              rel={l.external ? "noopener noreferrer" : undefined}
               initial={{ opacity: 0, y: 12 }}
               animate={{
                 opacity: open ? 1 : 0,
                 y: open ? 0 : 12,
               }}
               transition={{ delay: open ? 0.05 * i : 0, duration: 0.35 }}
-              className="font-display text-2xl font-semibold text-white text-display-contrast"
+              className={`font-display text-2xl font-semibold text-display-contrast ${
+                l.external ? "text-amber-300 underline underline-offset-4" : "text-white"
+              }`}
               onClick={() => setOpen(false)}
             >
               {l.label}

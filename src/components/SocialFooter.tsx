@@ -2,6 +2,11 @@ import { motion } from "framer-motion";
 
 const social = [
   {
+    label: "Agency",
+    href: "https://teja-agency-startup.vercel.app/",
+    icon: IconAgency,
+  },
+  {
     label: "GitHub",
     href: "https://github.com/saiteja00743",
     icon: IconGithub,
@@ -123,6 +128,23 @@ function IconLeetCode() {
   return (
     <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
       <path d="M16.102 17.93l8.614-16.038h-4.46l-6.77 12.628-2.134-4.11L14.46 2.5H9.998L6.87 11.71l2.134 4.11-4.77 7.918H.075l8.644-16.038 2.134 4.11 5.249 10.837z" />
+    </svg>
+  );
+}
+
+function IconAgency() {
+  return (
+    <svg
+      className="h-5 w-5"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      aria-hidden
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3.6 9h16.8M3.6 15h16.8" />
+      <path d="M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 0 18" />
     </svg>
   );
 }

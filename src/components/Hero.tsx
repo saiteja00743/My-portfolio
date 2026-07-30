@@ -101,6 +101,14 @@ export function Hero() {
           className="mt-9 flex flex-wrap items-center justify-center gap-3 md:mt-14 md:gap-4"
         >
           <a
+            href="https://teja-agency-startup.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="glass-dark glass-dark-hover inline-flex min-w-[9.5rem] items-center justify-center border-white/40 bg-white/10 px-5 py-2.5 font-sans text-[0.625rem] font-semibold uppercase tracking-editorial text-white transition-all duration-500 ease-luxury hover:border-white hover:bg-white hover:text-black md:min-w-[11rem] md:px-8 md:py-3.5 md:text-[0.6875rem]"
+          >
+            Visit Agency ↗
+          </a>
+          <a
             href="#projects"
             className="glass-dark glass-dark-hover inline-flex min-w-[9.5rem] items-center justify-center border-white/25 px-5 py-2.5 font-sans text-[0.625rem] font-semibold uppercase tracking-editorial text-white md:min-w-[11rem] md:px-8 md:py-3.5 md:text-[0.6875rem]"
           >
