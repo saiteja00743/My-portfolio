@@ -4,6 +4,8 @@ import {
   ProfileAnimeFloaters,
   ProfileAnimeGlow,
 } from "./ProfileAnimeBackdrop";
+import { ParticleCanvas } from "./ParticleCanvas";
+import { MagneticButton } from "./MagneticButton";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -23,6 +25,7 @@ export function Hero() {
       id="home"
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-5 pb-20 pt-24 md:px-6 md:pb-24 md:pt-32"
     >
+      <ParticleCanvas />
       <div className="pointer-events-none absolute inset-0 grain" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.06),transparent_55%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_80%_90%,rgba(255,255,255,0.03),transparent_45%)] animate-shimmer" />
@@ -100,26 +103,32 @@ export function Hero() {
           animate="show"
           className="mt-9 flex flex-wrap items-center justify-center gap-3 md:mt-14 md:gap-4"
         >
-          <a
-            href="https://teja-agency-startup.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="glass-dark glass-dark-hover inline-flex min-w-[9.5rem] items-center justify-center border-white/40 bg-white/10 px-5 py-2.5 font-sans text-[0.625rem] font-semibold uppercase tracking-editorial text-white transition-all duration-500 ease-luxury hover:border-white hover:bg-white hover:text-black md:min-w-[11rem] md:px-8 md:py-3.5 md:text-[0.6875rem]"
-          >
-            Visit Agency ↗
-          </a>
-          <a
-            href="#projects"
-            className="glass-dark glass-dark-hover inline-flex min-w-[9.5rem] items-center justify-center border-white/25 px-5 py-2.5 font-sans text-[0.625rem] font-semibold uppercase tracking-editorial text-white md:min-w-[11rem] md:px-8 md:py-3.5 md:text-[0.6875rem]"
-          >
-            View Projects
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex min-w-[9.5rem] items-center justify-center border border-white bg-white px-5 py-2.5 font-sans text-[0.625rem] font-semibold uppercase tracking-editorial text-black transition-all duration-500 ease-luxury hover:bg-transparent hover:text-white md:min-w-[11rem] md:px-8 md:py-3.5 md:text-[0.6875rem]"
-          >
-            Contact Me
-          </a>
+          <MagneticButton>
+            <a
+              href="https://teja-agency-startup.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-dark glass-dark-hover inline-flex min-w-[9.5rem] items-center justify-center border-white/40 bg-white/10 px-5 py-2.5 font-sans text-[0.625rem] font-semibold uppercase tracking-editorial text-white transition-all duration-500 ease-luxury hover:border-white hover:bg-white hover:text-black md:min-w-[11rem] md:px-8 md:py-3.5 md:text-[0.6875rem]"
+            >
+              Visit Agency ↗
+            </a>
+          </MagneticButton>
+          <MagneticButton>
+            <a
+              href="#projects"
+              className="glass-dark glass-dark-hover inline-flex min-w-[9.5rem] items-center justify-center border-white/25 px-5 py-2.5 font-sans text-[0.625rem] font-semibold uppercase tracking-editorial text-white md:min-w-[11rem] md:px-8 md:py-3.5 md:text-[0.6875rem]"
+            >
+              View Projects
+            </a>
+          </MagneticButton>
+          <MagneticButton>
+            <a
+              href="#contact"
+              className="inline-flex min-w-[9.5rem] items-center justify-center border border-white bg-white px-5 py-2.5 font-sans text-[0.625rem] font-semibold uppercase tracking-editorial text-black transition-all duration-500 ease-luxury hover:bg-transparent hover:text-white md:min-w-[11rem] md:px-8 md:py-3.5 md:text-[0.6875rem]"
+            >
+              Contact Me
+            </a>
+          </MagneticButton>
         </motion.div>
       </motion.div>
 

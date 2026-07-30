@@ -1,10 +1,93 @@
-import { motion } from "framer-motion";
-import { useState } from "react";
-import { projects } from "../data/projects";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useMemo } from "react";
+import { projects, Project } from "../data/projects";
+
+const CATEGORIES = [
+  "All",
+  "AI & ML",
+  "Full Stack",
+  "Agency & Client",
+  "Data & FinTech",
+];
 
 export function Projects() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredProjects = useMemo(() => {
+    return projects.filter((p) => {
+      // Category filter logic
+      let matchesCategory = true;
+      if (selectedCategory !== "All") {
+        const text = (
+          p.title +
+          " " +
+          p.description +
+          " " +
+          p.stack +
+          " " +
+          (p.tags?.join(" ") || "")
+        ).toLowerCase();
+
+        if (selectedCategory === "AI & ML") {
+          matchesCategory =
+            text.includes("ai") ||
+            text.includes("ml") ||
+            text.includes("deep learning") ||
+            text.includes("voice") ||
+            text.includes("vision") ||
+            text.includes("model") ||
+            text.includes("cnn");
+        } else if (selectedCategory === "Full Stack") {
+          matchesCategory =
+            text.includes("full stack") ||
+            text.includes("react") ||
+            text.includes("next.js") ||
+            text.includes("fastapi") ||
+            text.includes("mern") ||
+            text.includes("dashboard");
+        } else if (selectedCategory === "Agency & Client") {
+          matchesCategory =
+            text.includes("agency") ||
+            text.includes("startup") ||
+            text.includes("client") ||
+            text.includes("saas");
+        } else if (selectedCategory === "Data & FinTech") {
+          matchesCategory =
+            text.includes("bitcoin") ||
+            text.includes("fintech") ||
+            text.includes("data") ||
+            text.includes("analytics") ||
+            text.includes("forecasting") ||
+            text.includes("xgboost");
+        }
+      }
+
+      // Search query filter logic
+      let matchesSearch = true;
+      if (searchQuery.trim()) {
+        const q = searchQuery.toLowerCase().trim();
+        const searchables = (
+          p.title +
+          " " +
+          p.description +
+          " " +
+          p.stack +
+          " " +
+          (p.tags?.join(" ") || "")
+        ).toLowerCase();
+        matchesSearch = searchables.includes(q);
+      }
+
+      return matchesCategory && matchesSearch;
+    });
+  }, [selectedCategory, searchQuery]);
+
   return (
-    <section id="projects" className="relative bg-neutral-50 px-6 py-28 text-neutral-950 sm:px-10">
+    <section
+      id="projects"
+      className="relative bg-neutral-50 px-6 py-28 text-neutral-950 sm:px-10"
+    >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-black/10 to-transparent" />
 
       <div className="relative mx-auto max-w-6xl">
@@ -13,7 +96,7 @@ export function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-16 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"
+          className="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"
         >
           <div>
             <p className="font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-neutral-700">
@@ -29,11 +112,105 @@ export function Projects() {
           </p>
         </motion.div>
 
-        <div className="flex flex-col gap-14 lg:gap-20">
-          {projects.map((p, index) => (
-            <ProjectRow key={p.title} project={p} index={index} />
-          ))}
+        {/* Filter Controls Bar */}
+        <div className="mb-14 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between border-b border-neutral-200 pb-8">
+          {/* Category Pills */}
+          <div className="flex flex-wrap items-center gap-2">
+            {CATEGORIES.map((cat) => {
+              const active = selectedCategory === cat;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`relative rounded-full px-4 py-1.5 font-sans text-xs font-semibold tracking-wider transition-all duration-300 ${
+                    active
+                      ? "bg-neutral-950 text-white shadow-md"
+                      : "border border-neutral-300 bg-white/60 text-neutral-700 hover:border-neutral-950 hover:text-neutral-950"
+                  }`}
+                >
+                  {cat}
+                  {active && (
+                    <motion.div
+                      layoutId="activeFilterDot"
+                      className="absolute -bottom-1 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-neutral-950"
+                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                    />
+                  )}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Search Bar Input */}
+          <div className="relative w-full sm:w-72">
+            <svg
+              className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search projects or stack..."
+              className="w-full rounded-full border border-neutral-300 bg-white/80 py-2 pl-10 pr-9 text-xs font-sans font-medium text-neutral-900 placeholder-neutral-400 backdrop-blur-sm transition-all focus:border-neutral-950 focus:outline-none focus:ring-1 focus:ring-neutral-950"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery("")}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-neutral-950"
+                aria-label="Clear search"
+              >
+                ✕
+              </button>
+            )}
+          </div>
         </div>
+
+        {/* Project List */}
+        <motion.div layout className="flex flex-col gap-14 lg:gap-20">
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.length > 0 ? (
+              filteredProjects.map((p, index) => (
+                <ProjectRow key={p.title} project={p} index={index} />
+              ))
+            ) : (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                className="flex flex-col items-center justify-center py-20 text-center"
+              >
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-neutral-200 text-neutral-500 font-display text-2xl font-bold">
+                  ?
+                </div>
+                <h3 className="font-display text-xl font-semibold text-neutral-950">
+                  No projects match your filter
+                </h3>
+                <p className="mt-2 text-sm text-neutral-600">
+                  Try adjusting your search query or switching categories.
+                </p>
+                <button
+                  onClick={() => {
+                    setSelectedCategory("All");
+                    setSearchQuery("");
+                  }}
+                  className="mt-6 rounded-full bg-neutral-950 px-6 py-2 font-sans text-xs font-semibold uppercase tracking-widest text-white transition-all hover:bg-neutral-800"
+                >
+                  Reset Filters
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );
@@ -43,7 +220,7 @@ function ProjectRow({
   project,
   index,
 }: {
-  project: (typeof projects)[number];
+  project: Project;
   index: number;
 }) {
   const [imgOk, setImgOk] = useState(true);
@@ -52,11 +229,14 @@ function ProjectRow({
 
   return (
     <motion.article
+      layout
       initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-      className={`grid gap-10 lg:grid-cols-2 lg:gap-16 lg:items-center ${reverse ? "lg:[direction:rtl]" : ""}`}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      className={`grid gap-10 lg:grid-cols-2 lg:gap-16 lg:items-center ${
+        reverse ? "lg:[direction:rtl]" : ""
+      }`}
     >
       <div className={`${reverse ? "lg:[direction:ltr]" : ""}`}>
         <div className="glass-light glass-light-hover group overflow-hidden rounded-2xl border-black/[0.09]">

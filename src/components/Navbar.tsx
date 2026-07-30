@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const links = [
@@ -16,6 +16,13 @@ const links = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -41,6 +48,11 @@ export function Navbar() {
           : "border-b border-transparent bg-transparent"
       }`}
     >
+      {/* Top Reading Progress Bar */}
+      <motion.div
+        className="absolute top-0 left-0 right-0 h-[2px] origin-left bg-gradient-to-r from-neutral-400 via-white to-amber-300 z-10"
+        style={{ scaleX }}
+      />
       <nav className="mx-auto flex h-[3.75rem] max-w-6xl items-center justify-between px-5 md:h-[4.25rem] sm:px-8">
         <a
           href="#home"
