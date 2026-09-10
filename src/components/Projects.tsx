@@ -121,6 +121,7 @@ export function Projects() {
               return (
                 <button
                   key={cat}
+                  aria-pressed={active}
                   onClick={() => setSelectedCategory(cat)}
                   className={`relative rounded-full px-4 py-1.5 font-sans text-xs font-semibold tracking-wider transition-all duration-300 ${
                     active
@@ -157,6 +158,7 @@ export function Projects() {
               />
             </svg>
             <input
+              aria-label="Search projects or technology stack"
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -244,6 +246,7 @@ function ProjectRow({
             {imgOk ? (
               <img
                 src={project.image}
+                loading="lazy"
                 alt={project.imageAlt}
                 className="h-full w-full object-cover grayscale transition-all duration-700 ease-luxury group-hover:scale-[1.03] group-hover:grayscale-0"
                 onError={() => setImgOk(false)}
