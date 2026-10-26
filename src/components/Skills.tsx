@@ -1,13 +1,36 @@
 import { motion } from "framer-motion";
 
 const groups = [
-  { title: "Web fundamentals", items: ["HTML", "CSS", "JavaScript"] },
-  { title: "Frontend", items: ["React.js", "Next.js"] },
-  { title: "Backend", items: ["Node.js", "Express.js"] },
-  { title: "Data & persistence", items: ["MongoDB", "DBMS"] },
-  { title: "Languages", items: ["Java", "Python"] },
-  { title: "Problem solving", items: ["DSA"] },
-  { title: "AI / ML", items: ["AI & Machine Learning Basics"] },
+  {
+    title: "Frontend",
+    icon: "🖥️",
+    items: ["React.js", "Next.js", "HTML · CSS · JavaScript", "Tailwind CSS"],
+  },
+  {
+    title: "Backend",
+    icon: "⚙️",
+    items: ["Node.js", "Express.js", "FastAPI (Python)", "REST APIs"],
+  },
+  {
+    title: "AI / Machine Learning",
+    icon: "🤖",
+    items: ["Python · TensorFlow", "Scikit-learn · XGBoost", "LangGraph · LLM Agents", "OpenCV · Computer Vision"],
+  },
+  {
+    title: "Database & Cloud",
+    icon: "☁️",
+    items: ["MongoDB", "PostgreSQL · SQLite", "AWS (Practitioner)", "IBM Cloud · Vercel"],
+  },
+  {
+    title: "Languages",
+    icon: "💻",
+    items: ["Python", "JavaScript", "Java"],
+  },
+  {
+    title: "Tools & Practices",
+    icon: "🛠️",
+    items: ["Git · GitHub", "Docker", "DSA & Problem Solving", "Agile / Product thinking"],
+  },
 ];
 
 const cardVariants = {
@@ -32,19 +55,17 @@ export function Skills() {
           className="mb-16 max-w-2xl"
         >
           <p className="font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-white/75">
-            Technical profile
+            Technical skills
           </p>
           <h2 className="mt-4 font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold text-white text-display-contrast">
-            Technical field skills
+            What I build with
           </h2>
           <p className="mt-4 font-sans font-medium text-white/85">
-            Full stack development, data and APIs, core programming languages,
-            algorithms, and AI foundations—applied professionally across
-            coursework, personal projects, and production-oriented builds.
+            Full stack · AI/ML · Cloud · Problem solving — applied across internships, hackathons, and 15+ shipped projects.
           </p>
         </motion.div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {groups.map((g, i) => (
             <motion.article
               key={g.title}
@@ -57,12 +78,16 @@ export function Skills() {
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
               className="glass-dark glass-dark-hover flex flex-col rounded-2xl p-7"
             >
-              <h3 className="font-sans text-[0.625rem] font-semibold uppercase tracking-[0.35em] text-white/70">
-                {g.title}
-              </h3>
-              <ul className="mt-6 space-y-3 font-display text-xl font-medium text-white">
+              <div className="flex items-center gap-3 mb-5">
+                <span className="text-2xl" aria-hidden="true">{g.icon}</span>
+                <h3 className="font-sans text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
+                  {g.title}
+                </h3>
+              </div>
+              <ul className="space-y-2.5 font-sans text-base font-medium text-white/90">
                 {g.items.map((item) => (
-                  <li key={item} className="leading-snug">
+                  <li key={item} className="flex items-start gap-2 leading-snug">
+                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-white/40" />
                     {item}
                   </li>
                 ))}

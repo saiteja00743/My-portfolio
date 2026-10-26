@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 
 /* ── UptoSkills internship ─────────────────────────────────────────────── */
 const experience = {
-  role: "Captain of Domain — Android Development",
+  role: "Android Development Intern — Captain of Domain",
   org: "UptoSkills",
   period: "January 2026 – April 2026",
   duration: "3 months",
   highlights: [
-    "Android development delivery and domain ownership",
-    "Leadership, responsibility, and accountability for outcomes",
-    "Collaboration with the team and professional growth in a product setting",
+    "Led Android development delivery and owned the domain end-to-end",
+    "Accountable for team outcomes, code quality, and on-time delivery",
+    "Mentored peers and collaborated in a structured product environment",
   ],
 };
 
@@ -40,18 +40,17 @@ const ibmExperience = {
   period: "June 2026 – Present",
   status: "Ongoing",
   highlights: [
-    "AI & Machine Learning",
-    "Full Stack Development",
-    "Python Programming",
-    "React & Node.js",
-    "Git & GitHub",
-    "Industry Project Experience",
+    "AI & Machine Learning — model building and evaluation",
+    "Full Stack Development — React, Node.js, FastAPI",
+    "Python Programming — scripts, APIs, data processing",
+    "Industry Project Experience — real-world deliverables",
+    "Cloud & DevOps — Git, GitHub, deployment workflows",
   ],
   description:
-    "Currently participating in the AICTE University Engagement Internship Program through IBM SkillsBuild and Edunet Foundation. Working on AI, Machine Learning, Full Stack Development, Python, React, Node.js, APIs, and industry-oriented projects while gaining practical software engineering experience.",
+    "AICTE University Engagement Internship Program through IBM SkillsBuild and Edunet Foundation — working on production-oriented AI and full stack projects with industry guidance.",
 };
 
-/* ── Shared button classes (identical to existing card) ─────────────────── */
+/* ── Shared button classes ─────────────────────────────────────────────── */
 const btnClass =
   "inline-flex flex-1 items-center justify-center border border-white/25 bg-white/5 px-5 py-3.5 font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-white transition-colors hover:border-white/35 hover:bg-white/10 sm:min-w-[14rem] sm:flex-none";
 
@@ -78,14 +77,13 @@ export function ExperienceCertificates() {
           className="mb-14 max-w-2xl"
         >
           <p className="font-sans text-[0.6875rem] font-semibold uppercase tracking-editorial text-white/75">
-            Experience &amp; certificates
+            Work experience
           </p>
           <h2 className="mt-4 font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold text-display-contrast">
-            Internships &amp; verified credentials
+            2 Internships · Verified credentials
           </h2>
           <p className="mt-4 font-sans font-medium text-white/85">
-            Formal roles and issued documents you can download for
-            applications, interviews, or your records.
+            Formal roles with issued documents — download certificates directly for your records or applications.
           </p>
         </motion.div>
 
@@ -101,13 +99,22 @@ export function ExperienceCertificates() {
             whileHover={{ y: -4 }}
             className="glass-dark glass-dark-hover mx-auto max-w-3xl rounded-2xl border-white/15 p-8 sm:p-10"
           >
-            <h3 className="font-display text-2xl font-semibold leading-snug text-white sm:text-3xl">
-              {experience.role}
-            </h3>
-            <p className="mt-3 font-sans text-sm font-medium text-white/80">
-              {experience.org} · {experience.period} · {experience.duration}
-            </p>
-            <ul className="mt-8 space-y-2.5 border-t border-white/10 pt-8 font-sans text-sm leading-relaxed text-white/75">
+            {/* Header */}
+            <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
+              <div>
+                <h3 className="font-display text-2xl font-semibold leading-snug text-white sm:text-3xl">
+                  {experience.role}
+                </h3>
+                <p className="mt-2 font-sans text-sm font-medium text-white/80">
+                  {experience.org} · {experience.period} · {experience.duration}
+                </p>
+              </div>
+              <span className="shrink-0 rounded-full border border-white/20 bg-white/5 px-3 py-1 font-sans text-[0.6rem] font-semibold uppercase tracking-widest text-white/70">
+                Completed
+              </span>
+            </div>
+
+            <ul className="space-y-2.5 border-t border-white/10 pt-6 font-sans text-sm leading-relaxed text-white/75">
               {experience.highlights.map((line) => (
                 <li key={line} className="flex gap-2.5">
                   <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-white/50" />
@@ -116,7 +123,7 @@ export function ExperienceCertificates() {
               ))}
             </ul>
 
-            <div className="mt-10 flex flex-col gap-4 border-t border-white/10 pt-8">
+            <div className="mt-8 flex flex-col gap-4 border-t border-white/10 pt-6">
               {documentActions.map((item) => {
                 const fileUrl = encodeURI(item.href);
                 return (
@@ -156,24 +163,25 @@ export function ExperienceCertificates() {
           >
             {/* Status badge */}
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_6px_2px_rgba(52,211,153,0.6)]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_6px_2px_rgba(52,211,153,0.6)] animate-pulse" />
               <span className="font-sans text-[0.625rem] font-semibold uppercase tracking-widest text-emerald-400">
                 {ibmExperience.status}
               </span>
             </div>
 
+            {/* Header */}
             <h3 className="font-display text-2xl font-semibold leading-snug text-white sm:text-3xl">
               {ibmExperience.role}
             </h3>
-            <p className="mt-3 font-sans text-sm font-medium text-white/80">
+            <p className="mt-2 font-sans text-sm font-medium text-white/80">
               {ibmExperience.org} · {ibmExperience.period}
             </p>
 
-            <p className="mt-6 font-sans text-sm leading-relaxed text-white/70">
+            <p className="mt-5 font-sans text-sm leading-relaxed text-white/70">
               {ibmExperience.description}
             </p>
 
-            <ul className="mt-8 space-y-2.5 border-t border-white/10 pt-8 font-sans text-sm leading-relaxed text-white/75">
+            <ul className="mt-6 space-y-2.5 border-t border-white/10 pt-6 font-sans text-sm leading-relaxed text-white/75">
               {ibmExperience.highlights.map((line) => (
                 <li key={line} className="flex gap-2.5">
                   <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-white/50" />
@@ -182,8 +190,8 @@ export function ExperienceCertificates() {
               ))}
             </ul>
 
-            <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-8">
-              {/* View Completion Certificate — available (IBM SkillsBuild cert) */}
+            <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-6">
+              {/* View Completion Certificate */}
               <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
                 <a
                   href="/ibm-completion-certificate.jpg"
@@ -210,7 +218,7 @@ export function ExperienceCertificates() {
                   rel="noreferrer"
                   className={previewBtnClass}
                 >
-                  View Internship Details
+                  View IBM SkillsBuild Program ↗
                 </a>
               </div>
 

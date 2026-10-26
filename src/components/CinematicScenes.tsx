@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
 import { projects, type Project } from "../data/projects";
 
-const technologies = ["React.js", "Next.js", "Python", "Node.js", "MongoDB", "Java", "Express.js", "AI / ML", "JavaScript", "DSA"];
+const technologies = ["React.js", "Next.js", "Python", "Node.js", "MongoDB", "FastAPI", "Express.js", "AI / ML", "JavaScript", "LangGraph"];
 export function CreativeUniverse() {
   const reduced = useReducedMotion();
   const pointer = useMotionValue(0);
@@ -26,10 +26,10 @@ export function CreativeUniverse() {
 }
 
 const chapters = [
-  { label: "FOUNDATION", title: "Computer science", date: "B.Sc. (Hons)", detail: "Final-year Computer Science student at Kakatiya Government College, focused on full stack engineering and artificial intelligence.", href: "#about" },
-  { label: "JAN — APR 2026", title: "Android development", date: "UptoSkills", detail: "Captain of Domain — Android Development. Delivery, domain ownership, and collaboration in a product setting.", href: "#experience" },
-  { label: "JUN 2026 — PRESENT", title: "AI & full stack", date: "IBM · Edunet · AICTE", detail: "AICTE University Engagement Internship Program, working with AI, Python, React, Node.js, APIs, and industry projects.", href: "#experience" },
-  { label: "WHAT COMES NEXT", title: "Keep building", date: "The next chapter", detail: "Exploring AI, developing useful products, and turning ideas into real software. Nothing comes so easy…", href: "#projects" },
+  { label: "EDUCATION", title: "Computer science degree", date: "B.Sc. (Hons) · Kakatiya Govt. College", detail: "Final-year B.Sc. (Hons) Computer Science student focused on Full Stack Engineering and Artificial Intelligence. Strong foundation in DSA, DBMS, and software development principles.", href: "#about" },
+  { label: "JAN – APR 2026", title: "Android development internship", date: "UptoSkills · 3 months", detail: "Served as Captain of Domain — Android Development. Owned delivery, led collaboration, and was accountable for team outcomes in a structured product environment.", href: "#experience" },
+  { label: "JUN 2026 – PRESENT", title: "AI & full stack internship", date: "IBM SkillsBuild × Edunet × AICTE", detail: "AICTE University Engagement Program. Building AI/ML models, full stack apps with React and FastAPI, Python automation, and industry-oriented project deliverables.", href: "#experience" },
+  { label: "WHAT'S NEXT", title: "Ready for full-time roles", date: "Available immediately", detail: "Actively seeking full-time SDE / AI Engineer roles. I have 15+ shipped projects, 2 internships, and a strong drive to contribute and grow from day one.", href: "#contact" },
 ];
 export function JourneyClock() {
   const [active, setActive] = useState(2);

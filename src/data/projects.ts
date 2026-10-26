@@ -101,88 +101,63 @@ export const projects: Project[] = [
     tags: ["Predictive ML", "Data Analytics", "FastAPI", "XGBoost"],
   },
 
-  // ── Previous Projects ─────────────────────────────────────────────────────
+  // ── Full Stack & Other Projects ───────────────────────────────────────────
   {
     title: "Aurora — Women's Safety Platform",
     description:
-      "Final-year academic full-stack build: discreet legal guidance through an AI legal assistant, compassionate AI therapy chat with voice support, confidential complaint filing with authority notifications, and an admin dashboard—within a privacy-first interface.",
+      "Full-stack safety platform with an AI legal assistant, AI therapy chat with voice support, confidential complaint filing with authority notifications, and an admin dashboard — built privacy-first with real-world impact in mind.",
     stack:
       "React · Vite · Tailwind CSS · FastAPI · SQLite · OpenRouter API · Web3Forms",
     liveUrl: "https://aurora-women-saftey-xap1.vercel.app/",
     githubUrl: "https://github.com/saiteja00743/Aurora-women-Saftey",
     image: "/aurora-preview.png",
-    imageAlt: "Aurora women safety platform illustration",
+    imageAlt: "Aurora women safety platform",
+    tags: ["Full Stack", "AI Integration", "FastAPI", "React"],
   },
   {
     title: "AI Cost Tracker",
     description:
-      "A SaaS tool that detects overlapping AI subscriptions and shows teams where they're silently wasting money. Features a smart audit engine for plan optimization, Claude 3.5 Haiku-powered insights, Resend for automated reports, and 100% test coverage with Vitest.",
+      "SaaS tool that detects overlapping AI subscriptions and shows teams where they're silently wasting money. Includes a smart audit engine, Claude 3.5 Haiku-powered insights, automated email reports via Resend, and 100% test coverage with Vitest.",
     stack: "Next.js · TypeScript · Claude 3.5 Haiku · Resend · Vitest · Vercel",
     liveUrl: "https://aicosttracker-nu.vercel.app/",
     githubUrl: "https://github.com/saiteja00743/AICostTracker",
     image: "/previews/ai-cost-tracker.png",
     imageAlt: "AI Cost Tracker — Stop Overpaying for AI Tools",
-  },
-  {
-    title: "Netflix Clone",
-    description:
-      "A responsive, pixel-refined streaming landing experience built with disciplined layout and motion-ready structure.",
-    stack: "HTML · Tailwind CSS · JavaScript",
-    liveUrl: "https://saiteja00743.github.io/MyNetflix-clone/",
-    githubUrl: "https://github.com/saiteja00743/MyNetflix-clone",
-    image: "/previews/netflix-clone.png",
-    imageAlt: "Netflix Clone preview",
-  },
-  {
-    title: "AI Image & Prompt Generator",
-    description:
-      "Editorial interface for generating imagery and prompts through curated AI integrations—clean inputs, elevated output.",
-    stack: "Tailwind CSS · JavaScript · AI APIs",
-    liveUrl: "https://saiteja00743.github.io/image-generator/",
-    githubUrl: "https://github.com/saiteja00743/image-generator",
-    image: "/previews/ai-image-generator.png",
-    imageAlt: "AI Image Generator preview",
-  },
-  {
-    title: "Advanced To-Do List",
-    description:
-      "Task composition with persistence and quiet hierarchy—function disguised as calm product design.",
-    stack: "HTML · CSS · JavaScript",
-    liveUrl: "https://saiteja00743.github.io/My_To-Do/",
-    githubUrl: "https://github.com/saiteja00743/My_To-Do",
-    image: "/previews/todo-list.png",
-    imageAlt: "To-Do application preview",
-  },
-  {
-    title: "AI Powered Smart Agriculture",
-    description:
-      "Forecast-forward tooling for growers—weather intelligence and crop guidance distilled into a composed dashboard.",
-    stack: "Next.js · AI · Vercel",
-    liveUrl: "https://a-smart-agriculture-an-ai-powered-s.vercel.app/",
-    githubUrl:
-      "https://github.com/saiteja00743/A-Smart-Agriculture-An-AI-Powered-System-",
-    image: "/previews/smart-agriculture.png",
-    imageAlt: "Smart agriculture preview",
+    tags: ["SaaS", "Next.js", "LLM Integration", "TypeScript"],
   },
   {
     title: "AI Job Tracker & Smart Match",
     description:
-      "Full-stack application routing for opportunities—with semantic resume pairing orchestrated through AI.",
-    stack: "MERN · OpenAI · MongoDB · Railway",
+      "Full-stack MERN application for tracking job applications with semantic resume–job matching powered by OpenAI. Helps candidates identify the best-fit opportunities through AI-driven skill analysis and match scoring.",
+    stack: "MERN (MongoDB · Express · React · Node) · OpenAI · Railway",
     liveUrl: "https://aijobfinder-production-5af2.up.railway.app/",
     githubUrl: "https://github.com/saiteja00743/Ai_job_finder",
     image: "/previews/ai-job-tracker.png",
     imageAlt: "AI Job Tracker preview",
+    tags: ["Full Stack", "MERN", "OpenAI", "MongoDB"],
   },
   {
     title: "Sai — Student Learning Dashboard",
     description:
-      "A premium, production-ready Student Learning Dashboard built with performance-first patterns. Features Server/Client Component Split for zero layout shift, GPU-accelerated animations, custom CLS-free loading skeletons, and a smart Supabase backend with graceful fallback for RLS policy restrictions.",
+      "Production-ready Next.js 15 student dashboard with Server/Client Component split for zero layout shift, GPU-accelerated animations, CLS-free loading skeletons, and a Supabase backend with graceful RLS fallback.",
     stack:
       "Next.js 15 · TypeScript · Tailwind CSS v4 · Framer Motion · Supabase · Lucide React",
     liveUrl: "https://next-gen-learning-dashboard-psi.vercel.app/dashboard",
     githubUrl: "https://github.com/saiteja00743/Next-Gen-Learning-Dashboard",
     image: "/previews/sai-dashboard.png",
     imageAlt: "Sai Student Learning Dashboard preview",
+    tags: ["Next.js 15", "TypeScript", "Supabase", "Full Stack"],
+  },
+  {
+    title: "AI Powered Smart Agriculture",
+    description:
+      "AI-driven agriculture advisory platform with weather intelligence, crop disease detection, and AI-generated crop guidance — distilled into a clean, responsive dashboard for farmers and agronomists.",
+    stack: "Next.js · AI APIs · Vercel",
+    liveUrl: "https://a-smart-agriculture-an-ai-powered-s.vercel.app/",
+    githubUrl:
+      "https://github.com/saiteja00743/A-Smart-Agriculture-An-AI-Powered-System-",
+    image: "/previews/smart-agriculture.png",
+    imageAlt: "Smart agriculture preview",
+    tags: ["AI Integration", "Next.js", "Agriculture Tech"],
   },
 ];

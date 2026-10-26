@@ -9,19 +9,19 @@ export function Hero() {
   return (
     <section ref={ref} id="home" className="film-hero">
       <div className="film-grain" aria-hidden="true" />
-      <p className="film-welcome"><span>•••</span> WELCOME TO MY WORLD <span>•••</span></p>
+      <p className="film-welcome"><span>•••</span> FULL STACK DEVELOPER · AI ENGINEER <span>•••</span></p>
       <motion.h1 initial={{ opacity: 0, scale: reduced ? 1 : .95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} className="film-wordmark" aria-label="Gajavelli Sai Teja">SAI TEJA</motion.h1>
       <motion.div className="film-person" style={{ y: portraitY }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
         <img src="/profile-hero.png" alt="Gajavelli Sai Teja" loading="eager" width={1197} height={1314} />
       </motion.div>
-      <span className="film-chip chip-left">• DEVELOPER SAI TEJA •</span>
-      <span className="film-chip chip-right">• ALWAYS BUILDING •</span>
+      <span className="film-chip chip-left">• OPEN TO WORK •</span>
+      <span className="film-chip chip-right">• 15+ PROJECTS SHIPPED •</span>
       <div className="film-arrows left" aria-hidden="true">▸<br />▸<br />▸<br />▸<br />▸</div>
       <div className="film-arrows right" aria-hidden="true">◂<br />◂<br />◂<br />◂<br />◂</div>
       <div className="film-dots" aria-hidden="true">{Array.from({length: 16}, (_, i) => <i key={i} />)}</div>
       <div className="film-hero-bottom">
-        <p>GAJAVELLI SAI TEJA<small>Full Stack Developer · AI Explorer</small></p>
-        <a className="film-enter" href="#universe">EXPLORE MY WORLD <span>↓</span></a>
+        <p>GAJAVELLI SAI TEJA<small>Full Stack Developer · AI Engineer · Final Year CS</small></p>
+        <a className="film-enter" href="#about">VIEW MY PROFILE <span>↓</span></a>
         <a href="https://teja-agency-startup.vercel.app/" target="_blank" rel="noreferrer">VISIT MY AGENCY ↗</a>
       </div>
     </section>
