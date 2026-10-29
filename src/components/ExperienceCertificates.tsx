@@ -33,6 +33,36 @@ const documentActions = [
   },
 ] as const;
 
+/* ── Zidio Development internship ─────────────────────────────────────── */
+const zidioExperience = {
+  role: "Web Development Intern",
+  org: "Zidio Development",
+  period: "2026",
+  duration: "2 months",
+  highlights: [
+    "Built and deployed responsive web applications using modern front-end technologies",
+    "Collaborated with cross-functional teams on real-world client projects",
+    "Delivered production-ready features under industry-standard timelines",
+  ],
+};
+
+const zidioDocuments = [
+  {
+    id: "zidio-certificate",
+    downloadLabel: "Download completion certificate",
+    previewLabel: "Preview completion certificate",
+    href: "/zidio-completion-certificate.png",
+    downloadName: "Zidio_Development_Web_Internship_Completion_Certificate_Sai_Teja_Gajavelli.png",
+  },
+  {
+    id: "zidio-experience",
+    downloadLabel: "Download experience letter",
+    previewLabel: "Preview experience letter",
+    href: "/zidio-experience-letter.png",
+    downloadName: "Zidio_Development_Web_Internship_Experience_Letter_Sai_Teja_Gajavelli.png",
+  },
+] as const;
+
 /* ── IBM SkillsBuild × Edunet × AICTE internship ──────────────────────── */
 const ibmExperience = {
   role: "AI & Full Stack Development Intern",
@@ -80,7 +110,7 @@ export function ExperienceCertificates() {
             Work experience
           </p>
           <h2 className="mt-4 font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold text-display-contrast">
-            2 Internships · Verified credentials
+            3 Internships · Verified credentials
           </h2>
           <p className="mt-4 font-sans font-medium text-white/85">
             Formal roles with issued documents — download certificates directly for your records or applications.
@@ -152,7 +182,69 @@ export function ExperienceCertificates() {
             </div>
           </motion.article>
 
-          {/* ── Card 2 · IBM SkillsBuild × Edunet × AICTE ────────────────── */}
+          {/* ── Card 2 · Zidio Development ──────────────────────────────── */}
+          <motion.article
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            whileHover={{ y: -4 }}
+            className="glass-dark glass-dark-hover mx-auto max-w-3xl rounded-2xl border-white/15 p-8 sm:p-10"
+          >
+            {/* Header */}
+            <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
+              <div>
+                <h3 className="font-display text-2xl font-semibold leading-snug text-white sm:text-3xl">
+                  {zidioExperience.role}
+                </h3>
+                <p className="mt-2 font-sans text-sm font-medium text-white/80">
+                  {zidioExperience.org} · {zidioExperience.period} · {zidioExperience.duration}
+                </p>
+              </div>
+              <span className="shrink-0 rounded-full border border-white/20 bg-white/5 px-3 py-1 font-sans text-[0.6rem] font-semibold uppercase tracking-widest text-white/70">
+                Completed
+              </span>
+            </div>
+
+            <ul className="space-y-2.5 border-t border-white/10 pt-6 font-sans text-sm leading-relaxed text-white/75">
+              {zidioExperience.highlights.map((line) => (
+                <li key={line} className="flex gap-2.5">
+                  <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-white/50" />
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8 flex flex-col gap-4 border-t border-white/10 pt-6">
+              {zidioDocuments.map((item) => {
+                const fileUrl = encodeURI(item.href);
+                return (
+                  <div
+                    key={item.id}
+                    className="flex flex-col gap-2 sm:flex-row sm:flex-wrap"
+                  >
+                    <a
+                      href={fileUrl}
+                      download={item.downloadName}
+                      className={btnClass}
+                    >
+                      {item.downloadLabel}
+                    </a>
+                    <a
+                      href={fileUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={previewBtnClass}
+                    >
+                      {item.previewLabel}
+                    </a>
+                  </div>
+                );
+              })}
+            </div>
+          </motion.article>
+
+          {/* ── Card 3 · IBM SkillsBuild × Edunet × AICTE ────────────────── */}
           <motion.article
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
